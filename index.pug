@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet")
+        link(rel="stylesheet", href="/styles/main_style.css")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Reloj Analogico
+    body 
+        div(class="clock")
+            div(class="clock__numbers")
+                canvas(class="canvas" width="550" height="550")                
+                p(class="numbers") 3                
+                p(class="numbers") 6                
+                p(class="numbers") 9                
+                p(class="numbers") 12
+            div(class="clock__hands")
+                div(class="hands__hour")
+                div(class="hands__minute")
+                div(class="hands__second")  
+                div(class="hands__dot")
+            div(class="clock__date")
+                p(class="date__weekday") Lunes
+                p(class="date__day") 29
+                p(class="date__month") Julio
+                p(class="date__year") 1986
+
+        script(src="./scripts/script.js") 

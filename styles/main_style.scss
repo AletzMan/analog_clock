@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Anton', sans-serif;
+    background-color: #222222;
+}
+
+.clock {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(#5e5d5d 60%, #292929 80%, #3f3f3f 90%);
+    box-shadow: 0px 0px 10px 10px #121212;
+}
+.clock__numbers {
+    position: relative;
+    display: flex;
+    width: 550px; 
+    height: 550px;
+    border-radius: 50%;
+    background: linear-gradient(#adadad, #e2e2e2);
+    box-shadow: 1px 1px 4px 2px #292929 inset;
+}
+.numbers {
+    position: absolute;
+    font-size: 3.5rem;
+    color: #153e5a;
+    &:first-of-type {
+        right: 55px;
+        top:  calc(50% - 36px);
+    }
+    &:nth-of-type(2){
+        bottom: 45px;
+        left: calc(50% - 15px);
+    }
+    &:nth-of-type(3){
+        top:  calc(50% - 36px);
+        left: 55px;
+    }
+    &:nth-of-type(4){
+        top: 45px;
+        left: calc(50% - 20px);
+    }
+}
+.canvas {
+    position: absolute;
+}
+.clock__hands {
+    position: absolute;
+    display: flex;
+    width: 550px; 
+    height: 550px;
+    background: #3f3f3f33;
+    border-radius: 50%;
+    box-shadow: -70px -70px 200px 15px #a6eff833 inset;    
+}
+.hands__dot {
+    position: relative;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(#4e4e4e, #222222);
+}
+.hands__hour {
+    position: absolute;
+    width: 8px;
+    height: 150px;
+    top: 125px;
+    left: calc(50% - 4px);
+    transform-origin: bottom center;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #4e4e4e, #181818);
+    z-index: 2;
+}
+.hands__minute{
+    position: absolute;
+    width: 12px;
+    height: 200px;
+    top: 75px;
+    left: calc(50% - 6px);
+    border-radius: 20px;
+    transform-origin: bottom center;
+    background: linear-gradient(90deg, #090175, #0f0436);
+    z-index: 3;
+}
+.hands__second {
+    position: absolute;
+    width: 8px;
+    height: 250px;
+    top: 25px;
+    left: calc(50% - 4px);
+    transform-origin: bottom center;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #8f0101, #350101);
+    z-index: 4;
+}
+.clock__date {
+    position: absolute;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    width: 250px;
+    height: 100px;
+    bottom: 160px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #4d4d4d, #727272);
+    box-shadow: 2px 2px 5px 2px #222222 inset;
+    z-index: 1;
+}
+.date__weekday {
+    font-size: 1.7rem;
+    color: #b9b9b9;
+}
+.date__day {
+    font-size: 2.5rem;
+    grid-row: 2 / 3;
+    color: #862e05;
+}
+.date__month {
+    font-size: 1.8rem;
+    grid-column: 2 / 3;
+}
+.date__year {
+    font-size: 2.5rem;
+}
